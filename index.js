@@ -7,6 +7,7 @@ const { connectToDatabase } = require('./util/db')
 
 const notesRouter = require('./controllers/blogs')
 const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 
 const { errorHandler } = require('./util/middleware')
 
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use('/api/blogs', notesRouter)
 app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
 
 // put errorhandler last
 app.use(errorHandler)
