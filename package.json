@@ -7,5 +7,23 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "fso-part13-blog-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javieragnir/fso-part13-block-backend.git"
+  },
+  "author": "Javier Agnir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javieragnir/fso-part13-block-backend/issues"
+  },
+  "homepage": "https://github.com/javieragnir/fso-part13-block-backend#readme"
 }
