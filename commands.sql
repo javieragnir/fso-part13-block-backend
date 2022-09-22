@@ -6,12 +6,6 @@ CREATE TABLE blogs (
   likes integer DEFAULT 0
 );
 
-INSERT INTO blogs
-(author, url, title)
-VALUES
-('agnirj', 'http://fullstackopen.com', 'Full Stack Open is great!')
+INSERT INTO blogs (author, url, title) VALUES ('agnirj', 'http://fullstackopen.com', 'Full Stack Open is great!');
 
-INSERT INTO blogs
-(author, url, title)
-VALUES
-('agnirj', 'http://cs50.com', 'CS50 is great as well!')
+INSERT INTO blogs (author, url, title) VALUES ('agnirj', 'http://cs50.com', 'CS50 is great as well!');
