@@ -30,11 +30,19 @@ router.put('/:id', blogFinder, async(req, res) => {
   }
 })
 
-router.delete('/:id', blogFinder, async (req, res) => {
-  if (req.blog) {
-    await req.blog.destroy()
+router.delete('/:id', blogFinder, tokenExtractor, async (req, res) => {
+  if (!req.blog) {
+    res.status(204).end()
   }
-  res.status(204).end()
+
+  if (req.blog && req.blog.userId === req.decodedToken.id) {
+    console.log('req.blog', req.blog)
+    console.log('req.decodedToken', req.decodedToken)
+    await req.blog.destroy()
+    res.status(204).end()
+  } else {
+    res.status(400).send({ error: 'user id does not match id of user who posted blog'})
+  }
 })
 
 module.exports = router
