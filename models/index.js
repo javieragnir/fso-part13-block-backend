@@ -2,7 +2,7 @@ const Blog = require('./blog')
 const User = require('./user')
 
 User.hasMany(Blog)
-Blog.hasMany(User)
+Blog.belongsTo(User)
 Blog.sync({ alter: true })
 User.sync({ alter: true })
 
