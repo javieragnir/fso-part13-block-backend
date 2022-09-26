@@ -26,7 +26,6 @@ Blog.init({
   },
   year: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     min: 1991
   }
 }, {
