@@ -26,7 +26,10 @@ Blog.init({
   },
   year: {
     type: DataTypes.INTEGER,
-    min: 1991
+    validate: {
+      min: 1991,
+      max: new Date().getFullYear()
+    }
   }
 }, {
   sequelize,
