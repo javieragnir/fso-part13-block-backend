@@ -66,8 +66,6 @@ router.delete('/:id', blogFinder, tokenExtractor, async (req, res) => {
   }
 
   if (req.blog && req.blog.userId === req.decodedToken.id) {
-    console.log('req.blog', req.blog)
-    console.log('req.decodedToken', req.decodedToken)
     await req.blog.destroy()
     res.status(204).end()
   } else {
